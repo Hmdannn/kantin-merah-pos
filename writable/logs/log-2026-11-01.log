@@ -1,0 +1,687 @@
+ERROR - 2026-11-01 20:26:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): CodeIgniter\Model->__construct()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): CodeIgniter\Model->__construct()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+ERROR - 2026-11-01 20:26:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(140): CodeIgniter\Database\BaseConnection->query('SELECT p.id_pes...', Array)
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): App\Models\PesananModel->expireUnpaidOrders()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(140): CodeIgniter\Database\BaseConnection->query('SELECT p.id_pes...', Array)
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): App\Models\PesananModel->expireUnpaidOrders()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#11 {main}
+ERROR - 2026-11-01 20:26:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(21): CodeIgniter\Model->__construct()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(21): CodeIgniter\Model->__construct()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+ERROR - 2026-11-01 20:26:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): CodeIgniter\Model->__construct()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): CodeIgniter\Model->__construct()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+ERROR - 2026-11-01 20:26:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(140): CodeIgniter\Database\BaseConnection->query('SELECT p.id_pes...', Array)
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): App\Models\PesananModel->expireUnpaidOrders()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(140): CodeIgniter\Database\BaseConnection->query('SELECT p.id_pes...', Array)
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): App\Models\PesananModel->expireUnpaidOrders()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#11 {main}
+ERROR - 2026-11-01 20:26:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(175): CodeIgniter\Database\BaseConnection->query('CREATE TABLE IF...')
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(26): App\Controllers\CustomerController->ensureSampleData()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(175): CodeIgniter\Database\BaseConnection->query('CREATE TABLE IF...')
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(26): App\Controllers\CustomerController->ensureSampleData()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#11 {main}
+ERROR - 2026-11-01 20:26:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#13 {main}
+CRITICAL - 2026-11-01 20:26:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'kantin_merah_db'
+[Method: GET, Route: customer]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*, `kategori`.`nama_kategori`
+FROM `menu`
+JOIN `kategori` ON `kategori`.`id_kategori` = `menu`.`id_kategori`
+ORDER BY `menu`.`nama_menu` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CustomerController.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Downloads\\kantin-merah-pos-20261026T043539Z-1-001\\kantin-merah-pos\\public\\index.php')
+ERROR - 2026-11-01 20:26:35 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): CodeIgniter\Model->__construct()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): CodeIgniter\Model->__construct()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+ERROR - 2026-11-01 20:26:35 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(140): CodeIgniter\Database\BaseConnection->query('SELECT p.id_pes...', Array)
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): App\Models\PesananModel->expireUnpaidOrders()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(140): CodeIgniter\Database\BaseConnection->query('SELECT p.id_pes...', Array)
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): App\Models\PesananModel->expireUnpaidOrders()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#11 {main}
+ERROR - 2026-11-01 20:26:35 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(21): CodeIgniter\Model->__construct()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(21): CodeIgniter\Model->__construct()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+ERROR - 2026-11-01 20:26:35 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): CodeIgniter\Model->__construct()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): CodeIgniter\Model->__construct()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+ERROR - 2026-11-01 20:26:35 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(140): CodeIgniter\Database\BaseConnection->query('SELECT p.id_pes...', Array)
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): App\Models\PesananModel->expireUnpaidOrders()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(140): CodeIgniter\Database\BaseConnection->query('SELECT p.id_pes...', Array)
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): App\Models\PesananModel->expireUnpaidOrders()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#11 {main}
+ERROR - 2026-11-01 20:26:35 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(175): CodeIgniter\Database\BaseConnection->query('CREATE TABLE IF...')
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(26): App\Controllers\CustomerController->ensureSampleData()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(175): CodeIgniter\Database\BaseConnection->query('CREATE TABLE IF...')
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(26): App\Controllers\CustomerController->ensureSampleData()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#11 {main}
+ERROR - 2026-11-01 20:26:35 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#13 {main}
+CRITICAL - 2026-11-01 20:26:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'kantin_merah_db'
+[Method: GET, Route: customer]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*, `kategori`.`nama_kategori`
+FROM `menu`
+JOIN `kategori` ON `kategori`.`id_kategori` = `menu`.`id_kategori`
+ORDER BY `menu`.`nama_menu` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CustomerController.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Downloads\\kantin-merah-pos-20261026T043539Z-1-001\\kantin-merah-pos\\public\\index.php')
+ERROR - 2026-11-01 20:30:21 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(21): CodeIgniter\Model->__construct()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(21): CodeIgniter\Model->__construct()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+ERROR - 2026-11-01 20:30:21 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): CodeIgniter\Model->__construct()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1776): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(58): CodeIgniter\Database\BaseConnection->getFieldNames('pesanan')
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(44): App\Models\PesananModel->ensureColumns()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(381): App\Models\PesananModel->initialize()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(156): CodeIgniter\BaseModel->__construct(NULL)
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): CodeIgniter\Model->__construct()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+ERROR - 2026-11-01 20:30:22 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(140): CodeIgniter\Database\BaseConnection->query('SELECT p.id_pes...', Array)
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): App\Models\PesananModel->expireUnpaidOrders()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Models\PesananModel.php(140): CodeIgniter\Database\BaseConnection->query('SELECT p.id_pes...', Array)
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\BaseController.php(49): App\Models\PesananModel->expireUnpaidOrders()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(945): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#11 {main}
+ERROR - 2026-11-01 20:30:22 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(175): CodeIgniter\Database\BaseConnection->query('CREATE TABLE IF...')
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(26): App\Controllers\CustomerController->ensureSampleData()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(175): CodeIgniter\Database\BaseConnection->query('CREATE TABLE IF...')
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(26): App\Controllers\CustomerController->ensureSampleData()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#11 {main}
+ERROR - 2026-11-01 20:30:22 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'kantin_merah_db' in C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#3 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\app\Controllers\CustomerController.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#7 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#8 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\USER\Downloads\kantin-merah-pos-20261026T043539Z-1-001\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#13 {main}
+CRITICAL - 2026-11-01 20:30:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'kantin_merah_db'
+[Method: GET, Route: customer]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*, `kategori`.`nama_kategori`
+FROM `menu`
+JOIN `kategori` ON `kategori`.`id_kategori` = `menu`.`id_kategori`
+ORDER BY `menu`.`nama_menu` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CustomerController.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Downloads\\kantin-merah-pos-20261026T043539Z-1-001\\kantin-merah-pos\\public\\index.php')

@@ -1,0 +1,672 @@
+ERROR - 2026-10-24 08:44:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#13 {main}
+CRITICAL - 2026-10-24 08:44:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: YES)
+[Method: GET, Route: customer]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*, `kategori`.`nama_kategori`
+FROM `menu`
+JOIN `kategori` ON `kategori`.`id_kategori` = `menu`.`id_kategori`
+WHERE `menu`.`status_stok` = :menu.status_stok:
+AND `menu`.`jumlah_stok` > :menu.jumlah_stok:
+ORDER BY `menu`.`nama_menu` ASC', [...], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+ERROR - 2026-10-24 08:44:44 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#13 {main}
+CRITICAL - 2026-10-24 08:44:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: YES)
+[Method: GET, Route: customer]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*, `kategori`.`nama_kategori`
+FROM `menu`
+JOIN `kategori` ON `kategori`.`id_kategori` = `menu`.`id_kategori`
+WHERE `menu`.`status_stok` = :menu.status_stok:
+AND `menu`.`jumlah_stok` > :menu.jumlah_stok:
+ORDER BY `menu`.`nama_menu` ASC', [...], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+ERROR - 2026-10-24 08:45:08 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#13 {main}
+CRITICAL - 2026-10-24 08:45:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: YES)
+[Method: GET, Route: customer]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*, `kategori`.`nama_kategori`
+FROM `menu`
+JOIN `kategori` ON `kategori`.`id_kategori` = `menu`.`id_kategori`
+WHERE `menu`.`status_stok` = :menu.status_stok:
+AND `menu`.`jumlah_stok` > :menu.jumlah_stok:
+ORDER BY `menu`.`nama_menu` ASC', [...], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+ERROR - 2026-10-24 08:48:45 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#13 {main}
+CRITICAL - 2026-10-24 08:48:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: customer]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*, `kategori`.`nama_kategori`
+FROM `menu`
+JOIN `kategori` ON `kategori`.`id_kategori` = `menu`.`id_kategori`
+WHERE `menu`.`status_stok` = :menu.status_stok:
+AND `menu`.`jumlah_stok` > :menu.jumlah_stok:
+ORDER BY `menu`.`nama_menu` ASC', [...], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+ERROR - 2026-10-24 08:51:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#13 {main}
+CRITICAL - 2026-10-24 08:51:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: customer]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*, `kategori`.`nama_kategori`
+FROM `menu`
+JOIN `kategori` ON `kategori`.`id_kategori` = `menu`.`id_kategori`
+WHERE `menu`.`status_stok` = :menu.status_stok:
+AND `menu`.`jumlah_stok` > :menu.jumlah_stok:
+ORDER BY `menu`.`nama_menu` ASC', [...], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+ERROR - 2026-10-24 08:51:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'kantin_merah_db', 3306, '', 0)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*...', Array, false)
+#3 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\app\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+#7 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+#8 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\user\\O...')
+#13 {main}
+CRITICAL - 2026-10-24 08:51:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: customer]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `menu`.*, `kategori`.`nama_kategori`
+FROM `menu`
+JOIN `kategori` ON `kategori`.`id_kategori` = `menu`.`id_kategori`
+WHERE `menu`.`status_stok` = :menu.status_stok:
+AND `menu`.`jumlah_stok` > :menu.jumlah_stok:
+ORDER BY `menu`.`nama_menu` ASC', [...], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\CustomerController.php(31): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+DEBUG - 2026-10-24 08:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 08:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 09:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 09:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 09:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 09:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 09:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-24 10:18:47 --> ParseError: Unmatched '}'
+[Method: GET, Route: login]
+in APPPATH\Controllers\AuthController.php on line 64.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Controllers\\AuthController.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\AuthController')
+ 3 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\AuthController')
+ 4 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 5 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('login')
+ 6 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 10:18:56 --> ParseError: Unmatched '}'
+[Method: GET, Route: login]
+in APPPATH\Controllers\AuthController.php on line 64.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Controllers\\AuthController.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\AuthController')
+ 3 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\AuthController')
+ 4 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 5 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('login')
+ 6 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 10:18:58 --> ParseError: Unmatched '}'
+[Method: GET, Route: login]
+in APPPATH\Controllers\AuthController.php on line 64.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Controllers\\AuthController.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\AuthController')
+ 3 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\AuthController')
+ 4 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 5 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('login')
+ 6 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 10:19:05 --> ParseError: Unmatched '}'
+[Method: GET, Route: login]
+in APPPATH\Controllers\AuthController.php on line 64.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Controllers\\AuthController.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\AuthController')
+ 3 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\AuthController')
+ 4 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 5 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('login')
+ 6 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+DEBUG - 2026-10-24 10:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-24 10:25:06 --> ParseError: Unmatched '}'
+[Method: GET, Route: login]
+in APPPATH\Controllers\AuthController.php on line 64.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Controllers\\AuthController.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\AuthController')
+ 3 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\AuthController')
+ 4 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 5 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('login')
+ 6 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+DEBUG - 2026-10-24 10:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-24 10:51:36 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (2, 1, 1, \'\', 15000, \'2026-10-24 10:51:36\', \'2026-10-24 10:51:36\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (2, 1, 1, \'\', 15000, \'2026-10-24 10:51:36\', \'2026-10-24 10:51:36\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (2, 1, 1, \'\', 15000, \'2026-10-24 10:51:36\', \'2026-10-24 10:51:36\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (:id_pesanan:, :id_menu:, :jumlah:, :catatan_khusus:, :subtotal:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CustomerOrderController.php(86): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerOrderController->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerOrderController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+ERROR - 2026-10-24 10:51:38 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (3, 1, 1, \'\', 15000, \'2026-10-24 10:51:38\', \'2026-10-24 10:51:38\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (3, 1, 1, \'\', 15000, \'2026-10-24 10:51:38\', \'2026-10-24 10:51:38\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (3, 1, 1, \'\', 15000, \'2026-10-24 10:51:38\', \'2026-10-24 10:51:38\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (:id_pesanan:, :id_menu:, :jumlah:, :catatan_khusus:, :subtotal:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CustomerOrderController.php(86): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerOrderController->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerOrderController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+ERROR - 2026-10-24 10:51:54 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (4, 1, 1, \'\', 15000, \'2026-10-24 10:51:54\', \'2026-10-24 10:51:54\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (4, 1, 1, \'\', 15000, \'2026-10-24 10:51:54\', \'2026-10-24 10:51:54\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (4, 1, 1, \'\', 15000, \'2026-10-24 10:51:54\', \'2026-10-24 10:51:54\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detail_pesanan` (`id_pesanan`, `id_menu`, `jumlah`, `catatan_khusus`, `subtotal`, `created_at`, `updated_at`) VALUES (:id_pesanan:, :id_menu:, :jumlah:, :catatan_khusus:, :subtotal:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CustomerOrderController.php(86): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CustomerOrderController->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerOrderController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 10:55:39 --> ParseError: Unmatched '}'
+[Method: GET, Route: customer]
+in APPPATH\Models\KategoriModel.php on line 24.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\KategoriModel.php')
+ 2 APPPATH\Controllers\CustomerController.php(16): Composer\Autoload\ClassLoader->loadClass('App\\Models\\KategoriModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 10:55:44 --> ParseError: Unmatched '}'
+[Method: GET, Route: customer]
+in APPPATH\Models\KategoriModel.php on line 24.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\KategoriModel.php')
+ 2 APPPATH\Controllers\CustomerController.php(16): Composer\Autoload\ClassLoader->loadClass('App\\Models\\KategoriModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+DEBUG - 2026-10-24 10:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 10:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-24 10:58:40 --> ParseError: Unmatched '}'
+[Method: GET, Route: customer]
+in APPPATH\Models\KategoriModel.php on line 23.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\KategoriModel.php')
+ 2 APPPATH\Controllers\CustomerController.php(16): Composer\Autoload\ClassLoader->loadClass('App\\Models\\KategoriModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 10:58:43 --> ParseError: Unmatched '}'
+[Method: GET, Route: customer]
+in APPPATH\Models\KategoriModel.php on line 23.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\KategoriModel.php')
+ 2 APPPATH\Controllers\CustomerController.php(16): Composer\Autoload\ClassLoader->loadClass('App\\Models\\KategoriModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+DEBUG - 2026-10-24 11:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-24 11:03:24 --> ParseError: Unmatched '}'
+[Method: GET, Route: customer]
+in APPPATH\Models\KategoriModel.php on line 23.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\KategoriModel.php')
+ 2 APPPATH\Controllers\CustomerController.php(16): Composer\Autoload\ClassLoader->loadClass('App\\Models\\KategoriModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 11:03:25 --> ParseError: Unmatched '}'
+[Method: GET, Route: customer]
+in APPPATH\Models\KategoriModel.php on line 23.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\KategoriModel.php')
+ 2 APPPATH\Controllers\CustomerController.php(16): Composer\Autoload\ClassLoader->loadClass('App\\Models\\KategoriModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+DEBUG - 2026-10-24 11:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-24 11:03:37 --> ParseError: Unmatched '}'
+[Method: GET, Route: customer]
+in APPPATH\Models\KategoriModel.php on line 23.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\KategoriModel.php')
+ 2 APPPATH\Controllers\CustomerController.php(16): Composer\Autoload\ClassLoader->loadClass('App\\Models\\KategoriModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 11:04:23 --> ParseError: Unmatched '}'
+[Method: POST, Route: customer/checkout]
+in APPPATH\Models\DetailPesananModel.php on line 27.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\DetailPesananModel.php')
+ 2 APPPATH\Controllers\CustomerOrderController.php(18): Composer\Autoload\ClassLoader->loadClass('App\\Models\\DetailPesananModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerOrderController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 11:04:28 --> ParseError: Unmatched '}'
+[Method: POST, Route: customer/checkout]
+in APPPATH\Models\DetailPesananModel.php on line 27.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\DetailPesananModel.php')
+ 2 APPPATH\Controllers\CustomerOrderController.php(18): Composer\Autoload\ClassLoader->loadClass('App\\Models\\DetailPesananModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerOrderController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 11:05:22 --> ParseError: Unmatched '}'
+[Method: POST, Route: customer/checkout]
+in APPPATH\Models\DetailPesananModel.php on line 27.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\DetailPesananModel.php')
+ 2 APPPATH\Controllers\CustomerOrderController.php(18): Composer\Autoload\ClassLoader->loadClass('App\\Models\\DetailPesananModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerOrderController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 11:05:25 --> ParseError: Unmatched '}'
+[Method: POST, Route: customer/checkout]
+in APPPATH\Models\DetailPesananModel.php on line 27.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\DetailPesananModel.php')
+ 2 APPPATH\Controllers\CustomerOrderController.php(18): Composer\Autoload\ClassLoader->loadClass('App\\Models\\DetailPesananModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerOrderController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+CRITICAL - 2026-10-24 11:06:28 --> ParseError: Unmatched '}'
+[Method: POST, Route: customer/checkout]
+in APPPATH\Models\DetailPesananModel.php on line 27.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\DetailPesananModel.php')
+ 2 APPPATH\Controllers\CustomerOrderController.php(18): Composer\Autoload\ClassLoader->loadClass('App\\Models\\DetailPesananModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\CustomerOrderController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+DEBUG - 2026-10-24 11:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 11:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-24 11:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-10-24 11:06:59 --> ParseError: Unmatched '}'
+[Method: GET, Route: kasir]
+in APPPATH\Models\DetailPesananModel.php on line 27.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\DetailPesananModel.php')
+ 2 APPPATH\Controllers\KasirController.php(18): Composer\Autoload\ClassLoader->loadClass('App\\Models\\DetailPesananModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\KasirController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user\\OneDrive\\Documents\\POS\\kantin-merah-pos\\public\\index.php')
+DEBUG - 2026-10-24 11:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

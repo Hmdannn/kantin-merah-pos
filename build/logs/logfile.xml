@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="HealthTest" file="C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\tests\unit\HealthTest.php" tests="2" assertions="3" errors="0" failures="0" skipped="0" time="0.077215">
+    <testcase name="testIsDefinedAppPath" file="C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\tests\unit\HealthTest.php" line="12" class="HealthTest" classname="HealthTest" assertions="1" time="0.044674"/>
+    <testcase name="testBaseUrlHasBeenSet" file="C:\Users\user\OneDrive\Documents\POS\kantin-merah-pos\tests\unit\HealthTest.php" line="17" class="HealthTest" classname="HealthTest" assertions="2" time="0.032541"/>
+  </testsuite>
+</testsuites>

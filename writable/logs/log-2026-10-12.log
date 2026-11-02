@@ -1,0 +1,106 @@
+CRITICAL - 2026-10-12 05:42:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "kasir/index.php"
+[Method: GET, Route: kasir]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('kasir/index.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('kasir/index', [], true)
+ 3 APPPATH\Controllers\KasirController.php(9): view('kasir/index')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\KasirController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KasirController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-12 05:49:12 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: shift/aktif]
+in APPPATH\Models\ShiftModel.php on line 25.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\laragon\\www\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\ShiftModel.php')
+ 2 APPPATH\Controllers\ShiftController.php(15): Composer\Autoload\ClassLoader->loadClass('App\\Models\\ShiftModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\ShiftController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-12 05:49:23 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: shift/aktif]
+in APPPATH\Models\ShiftModel.php on line 25.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\laragon\\www\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\ShiftModel.php')
+ 2 APPPATH\Controllers\ShiftController.php(15): Composer\Autoload\ClassLoader->loadClass('App\\Models\\ShiftModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\ShiftController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-12 05:50:41 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: shift/aktif]
+in APPPATH\Models\ShiftModel.php on line 25.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\laragon\\www\\kantin-merah-pos\\vendor\\composer/../../app\\Models\\ShiftModel.php')
+ 2 APPPATH\Controllers\ShiftController.php(15): Composer\Autoload\ClassLoader->loadClass('App\\Models\\ShiftModel')
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\ShiftController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-12 06:34:33 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (\'1\', \'2026-10-12 06:34:33\', NULL, 0, 0, \'2026-10-12 06:34:33\', \'2026-10-12 06:34:33\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (\'1\', \'2026-10-12 06:34:33\', NULL, 0, 0, \'2026-10-12 06:34:33\', \'2026-10-12 06:34:33\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (\'1\', \'2026-10-12 06:34:33\', NULL, 0, 0, \'2026-10-12 06:34:33\', \'2026-10-12 06:34:33\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (:id_kasir:, :waktu_mulai:, :waktu_selesai:, :total_kas_tunai:, :total_kas_qris:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\ShiftController.php(67): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ShiftController->buka()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShiftController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-12 06:34:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: shift/buka]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (:id_kasir:, :waktu_mulai:, :waktu_selesai:, :total_kas_tunai:, :total_kas_qris:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\ShiftController.php(67): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ShiftController->buka()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShiftController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-12 06:34:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (\'1\', \'2026-10-12 06:34:33\', NULL, 0, 0, \'2026-10-12 06:34:33\', \'2026-10-12 06:34:33\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (\'1\', \'2026-10-12 06:34:33\', NULL, 0, 0, \'2026-10-12 06:34:33\', \'2026-10-12 06:34:33\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (:id_kasir:, :waktu_mulai:, :waktu_selesai:, :total_kas_tunai:, :total_kas_qris:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\ShiftController.php(67): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ShiftController->buka()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShiftController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-12 06:34:33 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (\'1\', \'2026-10-12 06:34:33\', NULL, 0, 0, \'2026-10-12 06:34:33\', \'2026-10-12 06:34:33\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (\'1\', \'2026-10-12 06:34:33\', NULL, 0, 0, \'2026-10-12 06:34:33\', \'2026-10-12 06:34:33\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (\'1\', \'2026-10-12 06:34:33\', NULL, 0, 0, \'2026-10-12 06:34:33\', \'2026-10-12 06:34:33\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `shift` (`id_kasir`, `waktu_mulai`, `waktu_selesai`, `total_kas_tunai`, `total_kas_qris`, `created_at`, `updated_at`) VALUES (:id_kasir:, :waktu_mulai:, :waktu_selesai:, :total_kas_tunai:, :total_kas_qris:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\ShiftController.php(67): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ShiftController->buka()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShiftController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
